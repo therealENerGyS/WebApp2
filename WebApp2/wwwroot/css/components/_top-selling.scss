@@ -1,0 +1,35 @@
+.top-selling {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+
+    .container-fluid {
+        padding-left: 4rem;
+        padding-right: 4rem;
+
+        .top-selling-header {
+            margin-bottom: 3rem;
+            font-size: $font-size-30;
+            font-weight: $font-weight-semibold;
+            color: $color-dark-2;
+            text-align: center;
+        }
+
+        .grid {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .next-previous {
+            display: flex;
+            justify-content: center;
+            padding: 2rem 0;
+
+            button {
+                margin: 0 1rem;
+                border-radius: 8px;
+                padding: 1rem 1.5rem;
+            }
+        }
+    }
+}

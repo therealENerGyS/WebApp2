@@ -1,0 +1,16 @@
+﻿<a asp-controller="products" asp-action="details" asp-route-id="@Model.Id" class="discount-card">
+    <img src="@Model.ImageUrl" alt="@Model.Title">
+    <h3 class=" product-name">@Model.Title</h3>
+    <div class="cost">
+        @if (Model.Discount != 0)
+        {
+            <p class="price line-through">$@Model.Price</p>
+            <p class="discount-price">$@Model.Discount</p>
+        }
+        else
+        {
+            <p class="price">$@Model.Price</p>
+        }
+        <i class="fa-regular fa-cart-plus"></i>
+    </div>
+</a>

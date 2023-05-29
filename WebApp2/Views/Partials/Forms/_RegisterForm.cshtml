@@ -1,0 +1,69 @@
+﻿@model RegisterViewModel
+
+<section class="register-form-section">
+    <div class="container">
+        <form asp-action="Register" method="post" class="form" novalidate>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <h3 class="form-header">Please Register Your new Account</h3>
+            <div class="double-input">
+                <div class="fname">
+                    <label asp-for="FirstName"></label>
+                    <input asp-for="FirstName">
+                    <small><span asp-validation-for="FirstName" class="text-danger"></span></small>
+                </div>
+                <div class="lname">
+                    <label asp-for="LastName"></label>
+                    <input asp-for="LastName">
+                    <small><span asp-validation-for="LastName" class="text-danger"></span></small>
+                </div>
+            </div>
+            <label asp-for="StreetName"></label>
+            <input asp-for="StreetName">
+            <small><span asp-validation-for="StreetName" class="text-danger"></span></small>
+            <div class="double-input">
+                <div class="postal">
+                    <label asp-for="PostalCode"></label>
+                    <input asp-for="PostalCode">
+                    <small><span asp-validation-for="PostalCode" class="text-danger"></span></small>
+                </div>
+                <div class="city">
+                    <label asp-for="City"></label>
+                    <input asp-for="City">
+                    <small><span asp-validation-for="City" class="text-danger"></span></small>
+                </div>
+            </div>
+            <div class="double-input">
+                <div class="mobile">
+                    <label asp-for="PhoneNumber"></label>
+                    <input asp-for="PhoneNumber">
+                </div>
+                <div class="company">
+                    <label asp-for="CompanyName"></label>
+                    <input asp-for="CompanyName">
+                </div>
+            </div>
+            <div class="single-input">
+                <label asp-for="Email"></label>
+                <input asp-for="Email">
+                <small><span asp-validation-for="Email" class="text-danger"></span></small>
+            </div>
+            <div class="single-input">
+                <label asp-for="Password"></label>
+                <input asp-for="Password">
+                <small><span asp-validation-for="Password" class="text-danger"></span></small>
+            </div>
+            <div class="single-input">
+                <label asp-for="ConfirmPassword"></label>
+                <input asp-for="ConfirmPassword">
+                <small><span asp-validation-for="ConfirmPassword" class="text-danger"></span></small>
+            </div>
+            <label asp-for="Image"></label>
+            <input asp-for="Image" type="file">
+            <input type="checkbox" asp-for="Terms" id="checkbox">
+            <label asp-for="Terms"></label>
+            <small><span asp-validation-for="Terms" class="text-danger"></span></small>
+
+            <button class="btn-red" type="submit">Submit</button>
+        </form>
+    </div>
+</section>

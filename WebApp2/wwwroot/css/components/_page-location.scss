@@ -1,0 +1,34 @@
+.page-location {
+    background-color: $color-dark-6;
+    padding: 12rem 0 6rem 0;
+    color: $color-dark-2;
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .current-page {
+            font-size: $font-size-30;
+            font-weight: $font-weight-bold;
+        }
+        .page-links {
+            display: flex;
+            letter-spacing: 4px;
+            .page-link {
+                font-size: $font-size-18;
+                &:hover {
+                    color: $color-theme-1;
+                }
+                &:first-child {
+                    margin-right: 0.3rem;
+                }
+                &:last-child {
+                    margin-left: 0.3rem;
+                    &:hover {
+                        color: $color-dark-2;
+                    }
+                }
+            }
+        }
+    }
+}

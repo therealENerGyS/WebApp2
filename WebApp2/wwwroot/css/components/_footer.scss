@@ -1,0 +1,14 @@
+footer {
+    background-color: $color-dark-2;
+    padding: 30px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    .container {
+        font-size: $font-size-16;
+        color: $color-dark-6;
+        display: flex;
+        justify-content: center;
+    }
+}

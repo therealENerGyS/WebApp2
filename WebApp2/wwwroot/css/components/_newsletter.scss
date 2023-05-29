@@ -1,0 +1,38 @@
+.newsletter {
+    padding: 5rem 0;
+    background-image: url('/images/placeholders/1920x300.svg');
+    .container {
+        .container-2 {
+            background-color: $color-white-1;
+            height: 12rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .subscribe {
+                width: 100%;
+                align-items: center;
+                background-color: $color-white-1;
+                border: 1px solid $color-dark-9;
+                border-radius: 50px;
+                display: flex;
+                height: 3.75rem;
+                @include lg {
+                    margin: 0 12rem;
+                }
+                input[type=text] {
+                    border: none;
+                    border-radius: 50px;
+                    font-size: $font-size-16;
+                    height: 100%;
+                    width: 100%;
+                    text-indent: 1.563rem;
+                }
+                .btn-newsletter {
+                    height: 100%;
+                    width: 55%;
+                    border-radius: 50px;
+                }
+            }   
+        }
+    }
+}

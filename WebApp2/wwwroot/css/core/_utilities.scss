@@ -1,0 +1,252 @@
+$border-radius-small: 8px;
+$border-radius-medium: 25px;
+$border-radius-rounded: 50%;
+
+@mixin center-content() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+html,
+body {
+    color: $color-dark-5;
+    font-family: $font-poppins;
+    font-size: $font-size-16;
+    font-weight: $font-weight-regular;
+    overflow-x: hidden;
+}
+
+a {
+    color: $color-theme-1;
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    padding: 1rem 3rem;
+    transition: all 0.2s;
+}
+
+iframe {
+    height: 825px;
+    width: 100%;
+}
+
+// Form style
+.form-header {
+    font-size: $font-size-16;
+    padding-bottom: 3rem;
+}
+
+.double-input {
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkbox-text {
+    display: flex;
+    font-size: $font-size-14;
+    margin-bottom: 2rem;
+
+    #checkbox {
+        margin-right: 0.5rem;
+    }
+}
+
+.link {
+    font-family: $font-poppins;
+    color: $color-white-1;
+    text-decoration: none;
+}
+
+.open-menu {
+    opacity: 0.99;
+    transform: translateX(-100%);
+    width: 100vw !important;
+}
+
+.invalid {
+    border: 1px solid $color-theme-1 !important;
+}
+
+.circle-red {
+    background-color: $color-theme-1;
+}
+
+.circle-yellow {
+    background-color: $color-yellow;
+}
+
+.circle-blue {
+    background-color: $color-blue;
+}
+
+.btn-white {
+    background-color: $color-white-1;
+    border: 1px solid $color-dark-1;
+    color: $color-dark-1;
+
+    &:hover {
+        background-color: $color-theme-1;
+        color: $color-white-1;
+    }
+}
+
+.btn-red {
+    background-color: $color-theme-1;
+    color: $color-white-1;
+    cursor: pointer;
+    padding: 1rem 3rem;
+
+    &:hover {
+        background-color: $color-dark-1;
+        color: $color-theme-1;
+    }
+}
+
+.btn-outline-white {
+    background-color: $color-white-1;
+    border: 1px solid $color-dark-5;
+    color: $color-dark-5;
+    font-family: $font-poppins;
+    padding: 10px 25px;
+    transition: all 0.25s ease-in-out;
+
+    &:hover {
+        background-color: $color-dark-2;
+        border: 1px solid $color-dark-2;
+        color: $color-white-1;
+    }
+}
+
+.btn-outline-dark {
+    background-color: transparent;
+    color: $color-white-1;
+    font-family: $font-poppins;
+    padding: 10px 25px;
+    transition: all 0.25s ease-in-out;
+
+    &:hover {
+        background-color: transparent;
+        color: $color-white-1;
+    }
+}
+
+.btn-toggle-white {
+    background-color: transparent;
+    border: none !important;
+    font-family: $font-poppins;
+    font-size: 1.8em;
+    padding: 0 !important;
+
+    &:hover {
+        background-color: transparent !important;
+        color: $color-dark-5 !important;
+    }
+}
+
+.grid {
+    margin: 2rem 0;
+    @include center-content;
+    flex-direction: column;
+
+    @include lg {
+        display: grid;
+        grid-column-gap: 2rem;
+        grid-row-gap: 3rem;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: space-between;
+    }
+
+    .card-product {
+        background-color: $color-white-1;
+        text-decoration: none;
+        display: block;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .body {
+            color: $color-dark-2;
+            margin-top: 5px;
+            font-family: $font-poppins;
+            padding-left: 2px;
+
+            .title {
+                text-align: start;
+                font-size: 18px;
+                font-weight: $font-weight-medium;
+            }
+
+            .cost {
+                text-align: start;
+                position: relative;
+                display: flex;
+                width: 100%;
+
+                .price {
+                    margin-right: 1rem;
+                    margin-bottom: 0;
+                }
+
+                i {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    text-align: center;
+                }
+
+                .tocart {
+                    padding: 2px;
+                    font-size: 18px;
+                    color: $color-dark-2;
+
+                    &:hover {
+                        color: $color-dark-4;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        @include xl {
+            .tocart {
+                display: none;
+            }
+
+            &:hover {
+                .tocart {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.form {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    width: 100%;
+}
+
+.validation-summary-errors {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+}

@@ -1,0 +1,36 @@
+﻿@model GridCollectionViewModel
+
+@if (Model != null)
+{
+    <section class="grid-collection">
+        <div class="container">
+            @if (!string.IsNullOrEmpty(Model.Title))
+            {
+                <h1 class="grid-header">@Model.Title</h1>
+            }
+
+            @if (Model.Categories != null)
+            {
+                <ul class="categories">
+                    @foreach (var category in Model.Categories)
+                    {
+                        <li class="cat-item">@category</li>
+                    }
+                </ul>
+            }
+            @if (Model.GridCards != null)
+            {
+                <div class="grid">
+                    @foreach (var item in Model.GridCards)
+                    {
+                        <partial name="/Views/Partials/_GridCard.cshtml" model="item" />
+                    }
+                </div>
+            }
+            @if (Model.LoadMore)
+            {
+                <button class="btn-white btn-load">LOAD MORE <i class="fa-solid fa-rotate-right"></i></button>
+            }
+        </div>
+    </section>
+}

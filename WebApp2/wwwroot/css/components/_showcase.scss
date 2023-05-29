@@ -1,0 +1,56 @@
+.showcase {
+    background-color: $color-white-4;
+    padding: 60px 0 30px 0;
+    color: $color-dark-2;
+
+    @include lg {
+        padding-top: 0;
+        margin-bottom: 2rem;
+    }
+
+    .container {
+        padding-top: 80px;
+        display: flex;
+        justify-content: center;
+
+        @include lg {
+            justify-content: space-between;
+        }
+
+        .content {
+            @include center-content();
+            flex-direction: column;
+
+            @include lg {
+                align-items: flex-start;
+                width: 50%;
+            }
+
+            .sm-title {
+                font-size: $font-size-18;
+                text-align: center;
+            }
+
+            .title {
+                font-size: $font-size-42;
+                font-weight: $font-weight-bold;
+                text-align: center;
+
+                @include lg {
+                    font-size: $font-size-60;
+                    text-align: start;
+                    width: 80%;
+                    margin: 0.5rem 0 2rem 0;
+                }
+            }
+        }
+
+        img {
+            display: none;
+
+            @include lg {
+                display: block;
+            }
+        }
+    }
+}

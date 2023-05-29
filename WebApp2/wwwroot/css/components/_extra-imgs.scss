@@ -1,0 +1,12 @@
+.extra-imgs {
+    padding: 4rem 0 1rem 0;
+    background-color: $color-white-3;
+    .container {
+        .extra-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 2.5rem;
+            margin-bottom: 5rem;
+        }
+    }
+}

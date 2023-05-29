@@ -1,0 +1,26 @@
+﻿@model List<UserViewModel>
+
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<section class="admin-dashboard">
+    <h1 class="admin-header">Users Management</h1>
+    <table>
+        <thead>
+            <tr>
+                <th class="mr-2">Username</th>
+                <th class="ml-2">Role</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td class="mr-2">@user.IdentityUser</td>
+                    <td class="ml-2">@user.IdentityRole</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</section>

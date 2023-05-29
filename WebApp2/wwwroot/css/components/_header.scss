@@ -1,0 +1,159 @@
+header {
+    position: fixed;
+    width: 100vw;
+    height: 80px;
+    z-index: 1;
+    background-color: $color-white-1;
+    display: flex;
+    padding: 0 20px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "logo toggle";
+
+        @include lg {
+            grid-template-columns: 4fr 4fr;
+            grid-template-areas: "logo menulinks";
+        }
+
+        @include xl {
+            grid-template-columns: 4fr 4fr 1fr;
+            grid-template-areas: "logo menulinks menuicons";
+        }
+        
+        .link {
+            color: $color-dark-1;
+        }
+
+        .logo {
+            grid-area: logo;
+        }
+
+        .menu-links {
+            grid-area: menulinks;
+            background-color: $color-dark-2;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 0vw;
+            padding-top: 80px;
+            transform: translateX(0%);
+            transition: all 0.25s;
+            font-size: 20px;
+            overflow: hidden;
+
+            @include lg {
+                position: static;
+                width: 100%;
+                font-size: 16px;
+                padding: 0;
+                background-color: transparent;
+                color: $color-dark-2;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
+
+            @include xl {
+                margin-right: 20px;
+            }
+
+            .link {
+                border: 1px solid $color-dark-1;
+                display: flex;
+                justify-content: center;
+                padding: 20px 0;
+                font-weight: $font-weight-medium;
+
+                &:hover {
+                    background-color: $color-dark-1;
+                }
+
+                @include lg {
+                    border: none;
+                    color: $color-dark-1;
+                    display: inline-block;
+                    margin: 0 1.5rem;
+
+                    &:first-child {
+                        margin: 0 1.5rem;
+                    }
+
+                    &:last-child {
+                        margin-right: 0.5rem;
+                    }
+
+                    &:hover {
+                        background-color: $color-white-1;
+                        color: $color-theme-1;
+                    }
+                }
+            }
+        }
+
+        .menu-icons {
+            grid-area: menuicons;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background-color: $color-dark-2;
+            color: $color-white-1;
+
+            @include xl {
+                position: static;
+                padding: 0;
+                background-color: $color-white-1;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
+
+            .link {
+                margin: 20px;
+                font-size: 18px;
+
+                &:hover {
+                    color: $color-dark-7;
+                }
+
+                @include xl {
+                    position: static;
+                    color: $color-dark-5;
+                    margin: 0 0 0 25px;
+                    font-size: 18px;
+
+                    &:hover {
+                        color: $color-theme-1;
+                    }
+                }
+            }
+        }
+
+        .toggle {
+            grid-area: toggle;
+            display: flex;
+            justify-content: flex-end;
+            text-align: right;
+            z-index: 1;
+            position: relative;
+
+            @include lg {
+                display: none;
+            }
+
+            .btn-toggle {
+                padding: 5px 15px;
+                font-size: 1.4rem;
+            }
+        }
+    }
+}

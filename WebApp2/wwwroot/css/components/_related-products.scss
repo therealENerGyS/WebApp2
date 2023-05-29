@@ -1,0 +1,27 @@
+.related-products {
+    margin-top: 3rem;
+    .container {
+        .related-header {
+            font-size: $font-size-24;
+            font-weight: $font-weight-semibold;
+        }
+        .grid-products {
+            .card-product {
+                .product-name {
+                    padding-left: 0.2rem;
+                }
+                .cost {
+                    display: flex;
+                    justify-content: flex-start;
+                    padding-left: 0.2rem;
+                    .price {
+                        text-decoration: line-through;
+                    }
+                    .discount {
+                        margin: 0 1rem;
+                    }
+                }
+            }
+          }
+    }
+}

@@ -1,0 +1,11 @@
+﻿@model InfoCardViewModel
+
+<a href="#" class="info-card">
+    <img src="@Model.ImageUrl" alt="@Model.Title">
+    <h2 class="info-header">@Model.Title</h2>
+    <p class="info-description">@Model.Description</p>
+    <div class="info-details">
+        <p class="postedby">POST BY: @Model.PostedBy</p>
+        <p class="comment">COMMENTS: @Model.Comments</p>
+    </div>
+</a>

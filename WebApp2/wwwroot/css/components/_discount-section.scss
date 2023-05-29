@@ -1,0 +1,80 @@
+.discount-section {
+    background-color: $color-white-2;
+    padding: 5rem 0;
+    margin: 2rem 0;
+
+    .container {
+        @include lg {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .discount-card {
+            width: 369px;
+            background-color: $color-white-1;
+
+            .product-name {
+                font-size: $font-size-18;
+                margin-top: 1rem;
+                padding-left: 0.5rem;
+                color: $color-dark-3;
+            }
+
+            .cost {
+                padding-left: 0.5rem;
+                display: flex;
+                justify-content: flex-start;
+                width: 100%;
+
+                .price {
+                    text-decoration: line-through;
+                    margin-right: 1rem;
+                    margin-bottom: 0;
+                }
+
+                i {
+                    position: absolute;
+                    transform: translateX(1800%);
+                    text-align: center;
+                }
+            }
+        }
+
+        .discount {
+            margin: 0 28px;
+            text-align: center;
+            background-color: $color-white-1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 3rem;
+
+            .h3-sell {
+                color: $color-theme-1;
+                font-size: $font-size-18;
+                font-weight: $font-weight-bold;
+            }
+
+            .h1-discount {
+                font-family: $font-playfair;
+                font-size: $font-size-48;
+                font-weight: $font-weight-bold;
+                color: $color-dark-3;
+            }
+
+            .h2-best-price {
+                font-size: $font-size-24;
+                font-weight: $font-weight-bold;
+                color: $color-dark-3;
+            }
+
+            .p-best-offer {
+                color: $color-dark-5;
+            }
+
+            .discover-link {
+                color: $color-dark-3;
+            }
+        }
+    }
+}

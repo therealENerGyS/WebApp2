@@ -1,0 +1,51 @@
+.register-form-section {
+    font-family: $font-roboto;
+    padding: 6rem 0;
+
+    .container {
+        .form {
+            label {
+                margin-top: 1rem;
+            }
+
+            input[type=text], input[type=email], input[type=password] {
+                width: 100%;
+                border: none;
+                background-color: #FAFAFA;
+                padding: 0.5rem;
+            }
+
+            .double-input {
+                .fname {
+                    margin-right: 1rem;
+                    width: 100%;
+                }
+
+                .lname {
+                    margin-left: 1rem;
+                    width: 100%;
+                }
+
+                .mobile {
+                    margin-right: 1rem;
+                    width: 100%;
+                }
+
+                .company {
+                    margin-left: 1rem;
+                    width: 100%;
+                }
+
+                .postal {
+                    margin-right: 1rem;
+                    width: 100%;
+                }
+
+                .city {
+                    margin-left: 1rem;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

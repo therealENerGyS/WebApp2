@@ -1,0 +1,64 @@
+.btn-white {
+  cursor: pointer;
+  background-color: $color-white-1;
+  border: 1px solid $color-dark-1;
+  color: $color-dark-1;
+  &:hover {
+    background-color: $color-theme-1;
+    color: $color-white-1;
+  }
+}
+
+.btn-red {
+  cursor: pointer;
+  background-color: $color-theme-1;
+  color: $color-white-1;
+  cursor: pointer;
+  padding: 1rem 3rem;
+  &:hover {
+    background-color: $color-dark-1;
+    color: $color-theme-1;
+  }
+}
+
+.btn-outline-white {
+  cursor: pointer;
+  background-color: $color-white-1;
+  border: 1px solid $color-dark-5;
+  color: $color-dark-5;
+  font-family: $font-poppins;
+  padding: 10px 25px;
+  transition: all 0.25s ease-in-out;
+
+  &:hover {
+    background-color: $color-dark-2;
+    border: 1px solid $color-dark-2;
+    color: $color-white-1;
+  }
+}
+.btn-outline-dark {
+  cursor: pointer;
+  background-color: transparent;
+  color: $color-white-1;
+  font-family: $font-poppins;
+  padding: 10px 25px;
+  transition: all 0.25s ease-in-out;
+
+  &:hover {
+    background-color: transparent;
+    color: $color-white-1;
+  }
+}
+.btn-toggle-white {
+  cursor: pointer;
+  background-color: transparent;
+  border: none !important;
+  font-family: $font-poppins;
+  font-size: 1.8em;
+  padding: 0 !important;
+
+  &:hover {
+    background-color: transparent !important;
+    color: $color-dark-5 !important;
+  }
+}

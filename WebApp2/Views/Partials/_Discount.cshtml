@@ -1,0 +1,18 @@
+﻿@model DiscountViewModel
+
+<section class="discount-section">
+    <div class="container">
+        <partial name="/Views/Partials/_DiscountCard.cshtml" model="Model.DiscountCard.FirstOrDefault()" />
+        <div class="discount">
+            <h3 class="h3-sell">UP TO SELL</h3>
+            <h1 class="h1-discount">50% OFF</h1>
+            <h2 class="h2-best-price">Get The Best Price</h2>
+            <p class="p-best-offer">
+                Get the best daily offer et accusam et justo duo dolores et ea rebum. Stet
+                clita kasd gubergren no sea taki
+            </p>
+            <a class="discover-link" href="#">Discover More</a>
+        </div>
+        <partial name="/Views/Partials/_DiscountCard.cshtml" model="Model.DiscountCard.LastOrDefault()" />
+    </div>
+</section>

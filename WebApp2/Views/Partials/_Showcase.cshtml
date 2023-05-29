@@ -1,0 +1,21 @@
+﻿@inject ShowcaseService showcaseService
+@{
+    var showcase = showcaseService.GetLatest();
+}
+
+@if (showcase != null)
+{
+    <section class="showcase">
+        <div class="container">
+            <div class="content">
+                <h2 class="sm-title">@showcase?.SmallTitle</h2>
+                <h3 class="title">@showcase?.Title</h3>
+                @if (!string.IsNullOrEmpty(@showcase?.Title) && !string.IsNullOrEmpty(@showcase?.Button?.Url))
+                {
+                    <a href="@showcase?.Button?.Url" class="btn-red">@showcase?.Button?.Content</a>
+                }
+            </div>
+            <img src="@showcase?.ImageUrl" alt="@showcase?.Title" />
+        </div>
+    </section>
+}

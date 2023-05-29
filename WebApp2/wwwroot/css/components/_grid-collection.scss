@@ -1,0 +1,36 @@
+.grid-collection {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+
+    .container {
+        text-align: center;
+
+        .grid-header {
+            font-size: $font-size-48;
+            font-weight: $font-weight-semibold;
+            text-align: center;
+            color: $color-dark-2;
+
+            @include lg {
+                margin-bottom: 1rem;
+            }
+        }
+
+        .categories {
+            display: flex;
+            list-style: none;
+            font-family: $font-roboto;
+            justify-content: center;
+
+            .cat-item {
+                margin-right: 5px;
+                color: $color-dark-4;
+
+                & + li::before {
+                    content: "/";
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}

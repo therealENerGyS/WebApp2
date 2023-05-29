@@ -1,0 +1,29 @@
+@import './core/fonts';
+@import './core/colors';
+@import './core/mixins';
+@import './core/utilities';
+@import './core/buttons';
+
+@import './components/header';
+@import './components/footer';
+
+@import './components/showcase';
+@import './components/grid-collection';
+@import './components/discount-section';
+@import './components/top-selling';
+@import './components/info-cards';
+@import './components/newsletter';
+@import './components/page-location';
+
+@import './components/login-form';
+
+@import './components/register-form';
+
+@import './components/contact-form';
+
+@import './components/product-details';
+@import './components/product-info';
+@import './components/related-products';
+@import './components/extra-imgs';
+
+@import './components/_admin-dashboard';

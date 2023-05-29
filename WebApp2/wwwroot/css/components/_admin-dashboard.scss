@@ -1,0 +1,14 @@
+﻿.admin-dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .admin-header {
+        margin-top: 12rem;
+    }
+    button {
+        margin: 0.5rem 0;
+        a {
+            color: black;
+        }
+    }
+}
